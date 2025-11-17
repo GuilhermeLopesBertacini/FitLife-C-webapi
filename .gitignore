@@ -1,0 +1,59 @@
+# Ignore build outputs
+bin/
+obj/
+out/
+
+# Visual Studio specific
+.vs/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Rider/IDE
+.idea/
+*.sln.iml
+
+# Visual Studio Code workspace settings (optional - remove if you commit your workspace)
+.vscode/
+
+# NuGet
+packages/
+*.nupkg
+*.snupkg
+project.lock.json
+
+# Publish artifacts
+publish/
+artifacts/
+
+# Resharper
+_ReSharper*/
+*.DotSettings.user
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Database / runtime files
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# Environment and secrets
+.env
+.env.*
+appsettings.*.Development.json
+secrets.json
+*.usersecrets
+
+# Azure
+*.publishsettings
+
+# Temporary files
+*.tmp
+*.temp
