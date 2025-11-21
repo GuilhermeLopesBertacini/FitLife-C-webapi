@@ -1,0 +1,12 @@
+services:
+  sqlserver:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: fitlife-sqlserver
+    environment:
+      SA_PASSWORD: "FitLife123"
+      ACCEPT_EULA: "Y" # Accept microsoft terms
+    ports:
+      - "1433:1433"
+    volumes:
+      - ./sqlserver-data:/var/opt/mssql
+    restart: unless-stopped

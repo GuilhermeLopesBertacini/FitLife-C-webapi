@@ -1,9 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using FitLife.Persistence.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// FitLifeDbContext setup from Persistence project
+builder.Services.AddDbContext<FitLifeDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddControllers();
-// Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 
 var app = builder.Build();
